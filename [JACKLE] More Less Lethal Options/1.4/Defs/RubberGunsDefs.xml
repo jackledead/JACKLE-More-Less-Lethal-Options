@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>RubberBulletSMG</defName>
+        <label>rubber bullet SMG</label>
+        <description>A compact submachine gun modified to fire less-lethal rubber bullets. Still risky at close range.</description>
+        <graphicData>
+            <texPath>Guns/RubberBulletSMG1</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_SMG</soundInteract>
+        <statBases>
+            <WorkToMake>6500</WorkToMake>
+            <Mass>1.3</Mass>
+            <Bulk>2.5</Bulk>
+            <ShotSpread>0.16</ShotSpread>
+            <SightsEfficiency>0.75</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+            <SwayFactor>1.20</SwayFactor>
+        </statBases>
+        <recipeMaker>
+			<researchPrerequisite>VWE_NonLethal</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+        <costList>
+            <Steel>35</Steel>
+            <Chemfuel>10</Chemfuel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>1.40</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_43cal_NL</defaultProjectile>
+                <burstShotCount>3</burstShotCount>
+                <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                <warmupTime>0.4</warmupTime>
+                <range>19</range>
+                <soundCast>RubberBulletSMG_Shot</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>25</magazineSize>
+                <reloadTime>5.5</reloadTime>
+                <ammoSet>AmmoSet_43cal_NL</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>False</aiUseBurstMode>
+                <aiAimMode>Snapshot</aiAimMode>
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>2.02</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>2.756</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>grip</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>2.00</cooldownTime>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>2.03</cooldownTime>
+                <armorPenetrationBlunt>2.757</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <thingSetMakerTags>
+			<li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+        <weaponTags>
+            <li>NonLethal</li>
+			<li>CE_OneHandedWeapon</li>
+			<li>CE_SMG</li>
+			<li>CE_AI_BROOM</li>
+        </weaponTags>
+    </ThingDef>
+</Defs>
