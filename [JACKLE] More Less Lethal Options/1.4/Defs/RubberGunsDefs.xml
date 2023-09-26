@@ -13,9 +13,9 @@
             <WorkToMake>6500</WorkToMake>
             <Mass>1.3</Mass>
             <Bulk>2.5</Bulk>
-            <ShotSpread>0.16</ShotSpread>
-            <SightsEfficiency>0.75</SightsEfficiency>
-            <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+            <ShotSpread>0.19</ShotSpread>
+            <SightsEfficiency>0.6</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
             <SwayFactor>1.20</SwayFactor>
         </statBases>
         <recipeMaker>
@@ -36,9 +36,9 @@
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>Bullet_43cal_NL</defaultProjectile>
                 <burstShotCount>3</burstShotCount>
-                <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                <ticksBetweenBurstShots>9</ticksBetweenBurstShots>
                 <warmupTime>0.4</warmupTime>
-                <range>19</range>
+                <range>18</range>
                 <soundCast>RubberBulletSMG_Shot</soundCast>
                 <soundCastTail>GunTail_Light</soundCastTail>
                 <muzzleFlashScale>9</muzzleFlashScale>
@@ -89,6 +89,12 @@
                 <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
             </li>
         </tools>
+        <modExtensions>
+			<li Class="CombatExtended.GunDrawExtension">
+				<DrawSize>0.88,0.88</DrawSize>
+				<DrawOffset>0.0,0.0</DrawOffset>
+			</li>
+		</modExtensions>
         <thingSetMakerTags>
 			<li>RewardStandardQualitySuper</li>
 		</thingSetMakerTags>
