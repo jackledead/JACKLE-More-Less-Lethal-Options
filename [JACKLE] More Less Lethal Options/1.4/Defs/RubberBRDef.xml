@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>RubberBulletBR</defName>
+        <label>rubber bullet battle rifle</label>
+        <description>A medium range battle rifle designed only to shoot rubber bullets excellently. It is quite bulky, but can hold a high capactiy of rubber less-lethal rounds.</description>
+        <graphicData>
+            <texPath>Guns/RubberBulletBattleRifle1</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <statBases>
+            <WorkToMake>7600</WorkToMake>
+            <Mass>3.1</Mass>
+            <Bulk>5.8</Bulk>
+            <ShotSpread>0.11</ShotSpread>
+            <SightsEfficiency>0.8</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+            <SwayFactor>1.17</SwayFactor>
+        </statBases>
+        <recipeMaker>
+            <researchPrerequisite>VWE_NonLethal</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <costList>
+            <Steel>50</Steel>
+            <Chemfuel>15</Chemfuel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>1.2</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_43cal_NL</defaultProjectile>
+                <burstShotCount>3</burstShotCount>
+                <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+                <warmupTime>0.55</warmupTime>
+                <range>35</range>
+                <soundCast>Shot_AssaultRifle</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+                <recoilPattern>Regular</recoilPattern>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>40</magazineSize>
+                <reloadTime>5.7</reloadTime>
+                <ammoSet>AmmoSet_43cal_NL</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>False</aiUseBurstMode>
+                <aiAimMode>AimedShot</aiAimMode>
+                <aimedBurstShotCount>2</aimedBurstShotCount>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>2.02</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>2.756</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>grip</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>2.00</cooldownTime>
+                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>2.03</cooldownTime>
+                <armorPenetrationBlunt>2.757</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawSize>1.0,1.05</DrawSize>
+                <DrawOffset>0.05,0</DrawOffset>
+            </li>
+        </modExtensions>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <weaponTags>
+            <li>NonLethal</li>
+            <li>CE_AI_AR</li>
+        </weaponTags>
+    </ThingDef>
+</Defs>
