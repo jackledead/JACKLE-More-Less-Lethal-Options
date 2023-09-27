@@ -10,12 +10,12 @@
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>
         <statBases>
-            <WorkToMake>7600</WorkToMake>
+            <WorkToMake>9500</WorkToMake>
             <Mass>3.1</Mass>
             <Bulk>5.8</Bulk>
-            <ShotSpread>0.11</ShotSpread>
-            <SightsEfficiency>0.8</SightsEfficiency>
-            <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+            <ShotSpread>0.16</ShotSpread>
+            <SightsEfficiency>0.65</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
             <SwayFactor>1.17</SwayFactor>
         </statBases>
         <recipeMaker>
@@ -25,8 +25,8 @@
             </skillRequirements>
         </recipeMaker>
         <costList>
-            <Steel>50</Steel>
-            <Chemfuel>15</Chemfuel>
+            <Steel>55</Steel>
+            <Chemfuel>20</Chemfuel>
             <ComponentIndustrial>2</ComponentIndustrial>
         </costList>
         <verbs>
@@ -35,11 +35,11 @@
                 <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>Bullet_43cal_NL</defaultProjectile>
-                <burstShotCount>3</burstShotCount>
+                <burstShotCount>2</burstShotCount>
                 <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
                 <warmupTime>0.55</warmupTime>
-                <range>35</range>
-                <soundCast>Shot_AssaultRifle</soundCast>
+                <range>30</range>
+                <soundCast>VWENL_Shot_RubberBulletPistol</soundCast>
                 <soundCastTail>GunTail_Medium</soundCastTail>
                 <muzzleFlashScale>9</muzzleFlashScale>
                 <recoilPattern>Regular</recoilPattern>
@@ -99,9 +99,8 @@
         <thingSetMakerTags>
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
-        <weaponTags>
+        <weaponTags Inherit="False">
             <li>NonLethal</li>
-            <li>CE_AI_AR</li>
         </weaponTags>
     </ThingDef>
 </Defs>
