@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <ThingDef ParentName="BaseHumanMakeableGun">
-        <defName>RubberBulletBR</defName>
-        <label>rubber bullet battle rifle</label>
-        <description>A medium range battle rifle designed only to shoot rubber bullets excellently. It is quite bulky, but can hold a high capactiy of rubber less-lethal rounds.</description>
+        <defName>LessLethalRC17Warden</defName>
+        <label>RC-17 "Warden"</label>
+        <description>A medium range battle rifle designed to shoot rubber bullets for incapacitation or capture. It is quite bulky, but can hold a high capactiy of rubber less-lethal rounds.</description>
         <graphicData>
             <texPath>Guns/RubberBulletBattleRifle1</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_Rifle</soundInteract>
         <statBases>
-            <WorkToMake>9500</WorkToMake>
+            <WorkToMake>8300</WorkToMake>
             <Mass>3.1</Mass>
             <Bulk>5.8</Bulk>
             <ShotSpread>0.16</ShotSpread>
-            <SightsEfficiency>0.65</SightsEfficiency>
+            <SightsEfficiency>0.68</SightsEfficiency>
             <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
             <SwayFactor>1.17</SwayFactor>
         </statBases>
@@ -25,7 +25,7 @@
             </skillRequirements>
         </recipeMaker>
         <costList>
-            <Steel>55</Steel>
+            <Steel>50</Steel>
             <Chemfuel>20</Chemfuel>
             <ComponentIndustrial>2</ComponentIndustrial>
         </costList>
@@ -35,10 +35,10 @@
                 <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>Bullet_43cal_NL</defaultProjectile>
-                <burstShotCount>2</burstShotCount>
-                <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-                <warmupTime>0.55</warmupTime>
-                <range>30</range>
+                <burstShotCount>3</burstShotCount>
+                <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+                <warmupTime>0.5</warmupTime>
+                <range>33</range>
                 <soundCast>VWENL_Shot_RubberBulletPistol</soundCast>
                 <soundCastTail>GunTail_Medium</soundCastTail>
                 <muzzleFlashScale>9</muzzleFlashScale>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <ThingDef ParentName="BaseHumanMakeableGun">
-        <defName>RubberBulletSMG</defName>
-        <label>rubber bullet SMG</label>
-        <description>A compact submachine gun modified to fire less-lethal rubber bullets. Still risky at close range.</description>
+        <defName>LessLethalRC21Bulldog</defName>
+        <label>RC-21 "Bulldog"</label>
+        <description>Riot Control 21. A compact bullpup carbine designed to fire less-lethal rubber bullets. Still dangerous at close range.</description>
         <graphicData>
             <texPath>Guns/RubberBulletSMG1</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -11,11 +11,11 @@
         <soundInteract>Interact_SMG</soundInteract>
         <statBases>
             <WorkToMake>7500</WorkToMake>
-            <Mass>1.3</Mass>
+            <Mass>2.3</Mass>
             <Bulk>2.5</Bulk>
             <ShotSpread>0.19</ShotSpread>
-            <SightsEfficiency>0.6</SightsEfficiency>
-            <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+            <SightsEfficiency>0.62</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
             <SwayFactor>1.20</SwayFactor>
         </statBases>
         <recipeMaker>
@@ -36,9 +36,9 @@
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>Bullet_43cal_NL</defaultProjectile>
                 <burstShotCount>3</burstShotCount>
-                <ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+                <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
                 <warmupTime>0.45</warmupTime>
-                <range>18</range>
+                <range>25</range>
                 <soundCast>VWENL_Shot_RubberBulletPistol</soundCast>
                 <soundCastTail>GunTail_Light</soundCastTail>
                 <muzzleFlashScale>9</muzzleFlashScale>
