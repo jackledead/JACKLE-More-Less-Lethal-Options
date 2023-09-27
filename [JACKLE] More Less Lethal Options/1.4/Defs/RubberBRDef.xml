@@ -3,7 +3,7 @@
     <ThingDef ParentName="BaseHumanMakeableGun">
         <defName>LessLethalRC17Warden</defName>
         <label>RC-17 "Warden"</label>
-        <description>A medium range battle rifle designed to shoot rubber bullets for incapacitation or capture. It is quite bulky, but can hold a high capactiy of rubber less-lethal rounds.</description>
+        <description>Riot Control 17. A medium range battle rifle designed to shoot rubber bullets for incapacitation or capture. It is quite bulky, but can hold a high capactiy of rubber less-lethal rounds.</description>
         <graphicData>
             <texPath>Guns/RubberBulletBattleRifle1</texPath>
             <graphicClass>Graphic_Single</graphicClass>
