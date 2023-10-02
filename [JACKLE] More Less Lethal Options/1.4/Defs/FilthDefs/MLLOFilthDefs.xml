@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BaseFilth">
+        <defName>Filth_11mmLessLethalCasings</defName>
+        <label>spent less lethal pistol casings</label>
+        <graphicData>
+            <texPath>Filth/Filth_LessLethalPistolCasings</texPath>
+        </graphicData>
+        <statBases>
+            <Beauty>-15</Beauty>
+            <Cleanliness>-6</Cleanliness>
+            <MaxHitPoints>35</MaxHitPoints>
+            <Flammability>0</Flammability>
+        </statBases>
+        <filth>
+            <cleaningWorkToReduceThickness>10</cleaningWorkToReduceThickness>
+            <disappearsInDays>20~30</disappearsInDays>
+            <maxThickness>5</maxThickness>
+        </filth>
+    </ThingDef>
+    <ThingDef ParentName="BaseFilth">
+        <defName>Filth_301LessLethalCasings</defName>
+        <label>spent less lethal rifle casings</label>
+        <graphicData>
+            <texPath>Filth/Filth_LessLethalPistolCasings</texPath>
+        </graphicData>
+        <statBases>
+            <Beauty>-15</Beauty>
+            <Cleanliness>-5</Cleanliness>
+            <MaxHitPoints>30</MaxHitPoints>
+            <Flammability>0</Flammability>
+        </statBases>
+        <filth>
+            <cleaningWorkToReduceThickness>10</cleaningWorkToReduceThickness>
+            <disappearsInDays>20~30</disappearsInDays>
+            <maxThickness>5</maxThickness>
+        </filth>
+    </ThingDef>
+    <ThingDef ParentName="BaseFilth">
+        <defName>Filth_60BigRubberCasings</defName>
+        <label>spent big rubber casings</label>
+        <graphicData>
+            <texPath>Filth/Filth_LessLethalPistolCasings</texPath>
+        </graphicData>
+        <statBases>
+            <Beauty>-15</Beauty>
+            <Cleanliness>-4</Cleanliness>
+            <MaxHitPoints>25</MaxHitPoints>
+            <Flammability>0</Flammability>
+        </statBases>
+        <filth>
+            <cleaningWorkToReduceThickness>10</cleaningWorkToReduceThickness>
+            <disappearsInDays>20~30</disappearsInDays>
+            <maxThickness>5</maxThickness>
+        </filth>
+    </ThingDef>
+</Defs>

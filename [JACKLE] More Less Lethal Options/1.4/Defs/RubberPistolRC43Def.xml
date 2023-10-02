@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>LessLethalRC43Pacifist</defName>
+        <label>RC-43 "Pacifist"</label>
+        <description>A compact pistol designed to fire less-lethal .43 caliber rubber bullets. The RC-43 "Pacifist" is ideal for crowd control and non-lethal engagements.</description>
+        <graphicData>
+            <texPath>Guns/RC43PacifistF</texPath>
+            <!-- TODO: make this path to the new Pistol art -->
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_Autopistol</soundInteract>
+        <!-- TODO: Check sound -->
+        <statBases>
+            <WorkToMake>6500</WorkToMake>
+            <Mass>1.2</Mass>
+            <Bulk>2.1</Bulk>
+            <ShotSpread>0.20</ShotSpread>
+            <SightsEfficiency>0.7</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+            <SwayFactor>1.07</SwayFactor>
+        </statBases>
+        <recipeMaker>
+            <researchPrerequisite>JackleLessLethalRubberProjectilesResearch</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>4</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <costList>
+            <Steel>20</Steel>
+            <Chemfuel>5</Chemfuel>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>1.0</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_11mmLessLethal_FR</defaultProjectile>
+                <ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+                <warmupTime>0.1</warmupTime>
+                <range>17</range>
+                <soundCast>Shot_Autopistol</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>7</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>13</magazineSize>
+                <reloadTime>3</reloadTime>
+                <ammoSet>AmmoSet_11mmLessLethal</ammoSet>
+                <!-- TODO: ??? -->
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>False</aiUseBurstMode>
+                <aiAimMode>Snapshot</aiAimMode>
+            </li>
+        </comps>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawSize>0.8,0.8</DrawSize>
+                <DrawOffset>0.0,0.0</DrawOffset>
+            </li>
+        </modExtensions>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <weaponTags Inherit="False">
+            <li>NonLethal</li>
+        </weaponTags>
+    </ThingDef>
+</Defs>

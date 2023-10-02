@@ -5,21 +5,21 @@
         <label>RC-21 "Bulldog"</label>
         <description>Riot Control 21. A compact bullpup carbine designed to fire less-lethal rubber bullets. Still dangerous at close range.</description>
         <graphicData>
-            <texPath>Guns/RubberBulletSMG1</texPath>
+            <texPath>Guns/RubberBulletSMG2Mustard</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_SMG</soundInteract>
         <statBases>
             <WorkToMake>7500</WorkToMake>
             <Mass>2.3</Mass>
-            <Bulk>2.5</Bulk>
+            <Bulk>4.5</Bulk>
             <ShotSpread>0.19</ShotSpread>
-            <SightsEfficiency>0.62</SightsEfficiency>
+            <SightsEfficiency>1</SightsEfficiency>
             <RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
-            <SwayFactor>1.20</SwayFactor>
+            <SwayFactor>1.35</SwayFactor>
         </statBases>
         <recipeMaker>
-			<researchPrerequisite>VWE_NonLethal</researchPrerequisite>
+			<researchPrerequisite>GasOperation</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>4</Crafting>
 			</skillRequirements>
@@ -34,12 +34,12 @@
                 <recoilAmount>1.40</recoilAmount>
                 <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>Bullet_43cal_NL</defaultProjectile>
+                <defaultProjectile>Bullet_11mmLessLethal_FR</defaultProjectile>
                 <burstShotCount>3</burstShotCount>
                 <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
                 <warmupTime>0.45</warmupTime>
                 <range>25</range>
-                <soundCast>VWENL_Shot_RubberBulletPistol</soundCast>
+                <soundCast>Shot_Autopistol</soundCast>
                 <soundCastTail>GunTail_Light</soundCastTail>
                 <muzzleFlashScale>9</muzzleFlashScale>
             </li>
@@ -48,7 +48,7 @@
             <li Class="CombatExtended.CompProperties_AmmoUser">
                 <magazineSize>25</magazineSize>
                 <reloadTime>5.5</reloadTime>
-                <ammoSet>AmmoSet_43cal_NL</ammoSet>
+                <ammoSet>AmmoSet_11mmLessLethal</ammoSet>
             </li>
             <li Class="CombatExtended.CompProperties_FireModes">
                 <aiUseBurstMode>False</aiUseBurstMode>

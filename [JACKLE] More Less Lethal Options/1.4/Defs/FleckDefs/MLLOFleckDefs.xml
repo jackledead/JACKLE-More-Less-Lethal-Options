@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- =============== Interface feedback ============== -->
+    <FleckDef ParentName="FleckBase_Thrown">
+        <defName>Fleck_11mmLessLethalAmmoCasings</defName>
+        <graphicData>
+            <texPath>Fleck/Fleck_LessLethalPistolCasing</texPath>
+            <renderInstanced>true</renderInstanced>
+        </graphicData>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <solidTime>3.0</solidTime>
+        <fadeOutTime>0.2</fadeOutTime>
+        <landSound>C_Impact_BulletCasing</landSound>
+        <collide>true</collide>
+    </FleckDef>
+    <FleckDef ParentName="FleckBase_Thrown">
+		<defName>Fleck_301LessLethalAmmoCasings</defName>
+		<graphicData>
+			<texPath>Fleck/Fleck_LessLethalPistolCasing</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<solidTime>3.0</solidTime>
+		<fadeOutTime>0.2</fadeOutTime>
+		<landSound>C_Impact_BulletCasing</landSound>
+		<collide>true</collide>
+	</FleckDef>
+    <FleckDef ParentName="FleckBase_Thrown">
+		<defName>Fleck_60BigRubberAmmoCasings</defName>
+		<graphicData>
+			<texPath>Fleck/Fleck_LessLethalPistolCasing</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<solidTime>3.0</solidTime>
+		<fadeOutTime>0.2</fadeOutTime>
+		<landSound>C_Impact_BulletCasing</landSound>
+		<collide>true</collide>
+	</FleckDef>
+</Defs>

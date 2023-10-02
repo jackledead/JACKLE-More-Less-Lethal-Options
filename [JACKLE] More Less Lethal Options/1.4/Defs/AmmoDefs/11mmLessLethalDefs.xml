@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingCategoryDef>
+        <defName>Ammo11mmLessLethalCategory</defName>
+        <label>11mm Less Lethal</label>
+        <parent>AmmoPistols</parent>
+        <iconPath>UI/Icons/Ammo/MLLO11mmIconFR</iconPath>
+        <!-- todo my own ammo graphics -->
+    </ThingCategoryDef>
+    <!-- ==================== AmmoSet ========================== -->
+    <CombatExtended.AmmoSetDef>
+        <defName>AmmoSet_11mmLessLethal</defName>
+        <label>11mm Less Lethal</label>
+        <ammoTypes>
+            <Ammo_11mmLessLethal_FR>Bullet_11mmLessLethal_FR</Ammo_11mmLessLethal_FR>
+            <Ammo_11mmLessLethal_SCR>Bullet_11mmLessLethal_SCR</Ammo_11mmLessLethal_SCR>
+            <Ammo_11mmLessLethal_HR>Bullet_11mmLessLethal_HR</Ammo_11mmLessLethal_HR>
+        </ammoTypes>
+        <similarTo>AmmoSet_Pistol</similarTo>
+    </CombatExtended.AmmoSetDef>
+    <!-- ==================== Ammo ========================== -->
+    <!-- see spreadsheet -->
+    <ThingDef Class="CombatExtended.AmmoDef"
+              Name="Ammo_11mmLessLethalBase"
+              ParentName="SmallAmmoBase"
+              Abstract="True">
+        <description>A large less-lethal cartridge designed for special riot control pistols and SMGs.</description>
+        <statBases>
+            <Bulk>0.01</Bulk>
+        </statBases>
+        <tradeTags>
+            <li>CE_AutoEnableTrade</li>
+            <li>CE_AutoEnableCrafting</li>
+        </tradeTags>
+        <thingCategories>
+            <li>Ammo11mmLessLethalCategory</li>
+        </thingCategories>
+    </ThingDef>
+    <!-- Solid Rubber -->
+    <ThingDef Class="CombatExtended.AmmoDef"
+              ParentName="Ammo_11mmLessLethalBase">
+        <defName>Ammo_11mmLessLethal_FR</defName>
+        <label>11mm Less Lethal (FR)</label>
+        <description>A large, solid rubber less-lethal cartridge designed for riot control pistols and SMGs.</description>
+        <graphicData>
+            <texPath>Ammo/MLLO11mmCartridge</texPath>
+            <!-- TODO: New Texture Please -->
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <Mass>0.022</Mass>
+            <MarketValue>0.1</MarketValue>
+        </statBases>
+        <ammoClass>FullRubber</ammoClass>
+        <cookOffProjectile>Bullet_11mmLessLethal_FR</cookOffProjectile>
+    </ThingDef>
+    <!-- Full Rubber Jacket -->
+    <ThingDef Class="CombatExtended.AmmoDef"
+              ParentName="Ammo_11mmLessLethalBase">
+        <defName>Ammo_11mmLessLethal_SCR</defName>
+        <label>11mm Less Lethal (SCR)</label>
+        <description>A large pistol cartridge with a complete rubber coating around a steel core. Hits hard.</description>
+        <graphicData>
+            <texPath>Ammo/MLLO11mmCartridge</texPath>
+            <!-- TODO: Implement the New Graphic, check stack graphics at 1, 2-499 and 5000. -->
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>0.105</MarketValue>
+            <Mass>0.023</Mass>
+            <!-- TODO: Check prices and mass, SCR should cost more and be havier than FR -->
+        </statBases>
+        <ammoClass>SteelCoreRubber</ammoClass>
+        <cookOffProjectile>Bullet_11mmLessLethal_SCR</cookOffProjectile>
+    </ThingDef>
+    <!-- Hollow Rubber -->
+    <ThingDef Class="CombatExtended.AmmoDef"
+              ParentName="Ammo_11mmLessLethalBase">
+        <defName>Ammo_11mmLessLethal_HR</defName>
+        <label>11mm Less Lethal (HR)</label>
+        <description>A large pistol and SMG cartridge that fires hollow-rubber, less-lethal bullets designed for riot control. Doesn't damage the body as much as heavier rounds and lacks penetration.</description>
+        <graphicData>
+            <texPath>Ammo/MLLO11mmCartridge</texPath>
+            <!-- TODO New Graphic -->
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>0.095</MarketValue>
+            <Mass>0.021</Mass>
+        </statBases>
+        <!-- TODO: Check mass and cost in game -->
+        <ammoClass>HollowRubber</ammoClass>
+        <cookOffProjectile>Bullet_11mmLessLethal_HR</cookOffProjectile>
+    </ThingDef>
+    <!-- ================== Projectiles ================== -->
+    <!-- Note: see spreadsheet -->
+    <!-- 11mm Base Bullet projectile, parent -->
+    <ThingDef Name="Base11mmLessLethalBullet"
+              ParentName="BaseBulletCE"
+              Abstract="true">
+        <graphicData>
+            <texPath>Projectiles/SmallBlueLessLethalBullet/SmallBlueLessLethalBullet</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageDef>LessLethalRubberBluntDamage</damageDef>
+            <speed>40</speed>
+            <!-- VWE NL pistol is speed 32 -->
+            <dropsCasings>true</dropsCasings>
+            <casingMoteDefname>Fleck_11mmLessLethalAmmoCasings</casingMoteDefname>
+            <casingFilthDefname>Filth_11mmLessLethalCasings</casingFilthDefname>
+            <!-- TODO: Check in game visuals of fleck and filth -->
+        </projectile>
+    </ThingDef>
+    <!-- TODO: for the 11mm family, figure out muscle spasm BS. i think i did it? 9/29/23 8:40 AM -->
+    <!-- 11mm FR -->
+    <ThingDef ParentName="Base11mmLessLethalBullet">
+        <defName>Bullet_11mmLessLethal_FR</defName>
+        <label>11mm Less Lethal (FR) Bullet</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>6</damageAmountBase>
+            <armorPenetrationSharp>0</armorPenetrationSharp>
+            <armorPenetrationBlunt>1.3</armorPenetrationBlunt>
+        </projectile>
+    </ThingDef>
+    <!-- 11mm SCR -->
+    <ThingDef ParentName="Base11mmLessLethalBullet">
+        <defName>Bullet_11mmLessLethal_SCR</defName>
+        <label>11mm Less Lethal (SCR) Bullet</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>8</damageAmountBase>
+            <armorPenetrationSharp>0.05</armorPenetrationSharp>
+            <armorPenetrationBlunt>1.4</armorPenetrationBlunt>
+        </projectile>
+    </ThingDef>
+    <!-- 11mm HR -->
+    <ThingDef ParentName="Base11mmLessLethalBullet">
+        <defName>Bullet_11mmLessLethal_HR</defName>
+        <label>11mm Less Lethal (HR) Bullet</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>4</damageAmountBase>
+            <armorPenetrationSharp>0</armorPenetrationSharp>
+            <armorPenetrationBlunt>1.1</armorPenetrationBlunt>
+        </projectile>
+    </ThingDef>
+    <!-- ==================== Recipes ========================== -->
+    <!-- TODO: check recipes in game -->
+    <!-- see spreadsheet -->
+    <RecipeDef Name="JackleLessLethalSmallArmsAmmoRecipeBase"
+               ParentName="AmmoRecipeBase"
+               Abstract="true">
+        <researchPrerequisite>JackleLessLethalRubberProjectilesResearch</researchPrerequisite>
+        <skillRequirements>
+            <Crafting>4</Crafting>
+        </skillRequirements>
+    </RecipeDef>
+    <RecipeDef ParentName="AmmoRecipeBase">
+        <defName>MakeAmmo_11mmLessLethal_FR</defName>
+        <label>make 11mm Less Lethal (FR) cartridge x200</label>
+        <description>Craft x200 11mm Less Lethal Full Rubber (FR) cartridges.</description>
+        <jobString>making 11mm Less Lethal (FR) cartridges</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>16</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chemfuel</li>
+                    </thingDefs>
+                </filter>
+                <count>12</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Steel</li>
+                <li>Chemfuel</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Ammo_11mmLessLethal_FR>200</Ammo_11mmLessLethal_FR>
+        </products>
+        <workAmount>1800</workAmount>
+    </RecipeDef>
+    <RecipeDef ParentName="AmmoRecipeBase">
+        <defName>MakeAmmo_11mmLessLethal_SCR</defName>
+        <label>make 11mm Less Lethal (SCR) cartridge x200</label>
+        <description>Craft x200 11mm Less Lethal Rubber-Jacketed Steel Core (SCR) cartridges.</description>
+        <jobString>making 11mm Less Lethal (SCR) cartridges</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>22</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chemfuel</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Steel</li>
+                <li>Chemfuel</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Ammo_11mmLessLethal_SCR>200</Ammo_11mmLessLethal_SCR>
+        </products>
+        <workAmount>1900</workAmount>
+    </RecipeDef>
+    <RecipeDef ParentName="AmmoRecipeBase">
+        <defName>MakeAmmo_11mmLessLethal_HR</defName>
+        <label>make 11mm Less Lethal (HR) cartridge x200</label>
+        <description>Craft x200 11mm Less Lethal Hollow Rubber (HR) cartridges.</description>
+        <jobString>making 11mm Less Lethal (HR) cartridges</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>16</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chemfuel</li>
+                    </thingDefs>
+                </filter>
+                <count>9</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Steel</li>
+                <li>Chemfuel</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Ammo_11mmLessLethal_HR>200</Ammo_11mmLessLethal_HR>
+        </products>
+        <workAmount>1800</workAmount>
+    </RecipeDef>
+</Defs>
