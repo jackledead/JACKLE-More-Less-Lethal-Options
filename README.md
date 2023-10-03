@@ -46,7 +46,7 @@ Changes:
 - New spent casings texture for filth on ground
 
 Credits to original authors for some of the gun art I reskinned. Bill Doors and slomow on discord. Art used with permission.
-
+Font by manador on Ludeon forums
 Special thanks to LateRusher, my dear design partner.
 
 Questions and Answers:
