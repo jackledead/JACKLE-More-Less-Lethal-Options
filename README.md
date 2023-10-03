@@ -3,9 +3,69 @@ Rimworld Mod. Adds new less/non lethal options including rubber bullet(s)/weapon
 
 This is my BETA branch, all newest updates will occur here then to Steam later.
 
-![Preview](https://github.com/jackledead/JACKLE-More-Less-Lethal-Options/assets/75153234/d161fed3-8507-452a-ba7b-343f777b372a)
+[JACKLE] More Less Lethal Options
 
-![Mod release rubber bullet guns infographic 1](https://github.com/jackledead/JACKLE-More-Less-Lethal-Options/assets/75153234/9325ff50-3117-46d9-ad15-43412b4b56b0)
+![Preview2](https://github.com/jackledead/JACKLE-More-Less-Lethal-Options/assets/75153234/ac6137d6-f0bf-4809-95c2-692f0d389301)
+
+![MLLO retextures 10 2 23](https://github.com/jackledead/JACKLE-More-Less-Lethal-Options/assets/75153234/9a18e076-0237-445c-b64a-0bc391313ede)
+
+READ ME READ ME
+
+Only works with CE! Combat Extended only!
+
+Adds new less/non lethal options including rubber bullet(s)/weapons, for taking people alive this time.
+
+Currently:
+Weapons:
+RC-17 "Warden" battle rifle. Ammo: Currently 11mm, will change to a new rifle round.
+RC-21 "Bulldog" bullpup carbine. Ammo: Currently 11mm, will change to a new rifle round.
+RC-43 "Pacifist" full-size pistol. Ammo: 11mm Less Lethal
+RC-5 "Flurry" submachine gun. Ammo: 11mm Less Lethal
+Ammo:
+11mm Less Lethal: Full Rubber, Steel Core Rubber and Hollow Rubber.
+
+Github Link: https://github.com/jackledead/JACKLE-More-Less-Lethal-Options
+
+Original Version: 9.26.23.01
+
+Current Update: 10.02.23.06
+
+Update log for version 10.02.23.6
+
+Changes:
+
+- Added RC-43 "Pacifist" pistol and RC-5 "Flurry" SMG
+- Dropped the VWE:Non Lethal dependency including the old rubber ammo in that CE patch.
+- Made a new 11 mm Less Lethal rubber round with 3 variants: Full Rubber (FR), Steel Core Rubber (SCR) and Hollow Rubber (HR)
+- New textures for stacking/storing 11mm Less Lethal ammo
+- Retextured RC-17 "Warden" and RC-21 "Bulldog" to fit new guns
+- New preview image
+- New Research "Rubber Projectiles"
+- RC-17 and RC-21 also require GasOperation
+- New spent casing texture when firing ("fleck")
+- New spent casings texture for filth on ground
+
+Credits to original authors for some of the gun art I reskinned. Bill Doors and slomow on discord. Art used with permission.
+
+Special thanks to LateRusher, my dear design partner.
+
+Questions and Answers:
+
+- Does this work with CE? It only works with CE.
+- Is this compatible with VWE: Non Lethal? Yes.
+- Does pistol round penetrate power armor like in VWE Non Lethal's CE Patch? No.
+- Does the ammo make people bleed? No bleed rate. It's not sharp.
+- How do I make these? Same as other guns, but you need the Rubber Projectiles research. You need GasOperation for the 17 and 21. They take rubber, chemfuel and components. The 11mm ammo is made in increments of 200 and only needs chemfuel and steel.
+- Can I recommend something? Sure but I might not do it. Use the stickied post.
+
+Known Issues:
+
+- Hediff refers to some code that isnt complied yet, youll get a dev log error every time one of these hits flesh with enough force.
+- May or may not damage mechs, will be fixed soon.
+- The rubber will still kill. Yes. Theyre called less lethal, not non lethal. At least hey dont make holes. Hollow Rubber is the weakest and safest.
+- Balancing issues. Please tell me your thoughts.
+
+Thanks for checking out my mod. Message me on discord if you really need me. I'm in the rimworld and CE server.
 
 [https://steamcommunity.com/sharedfiles/filedetails/?id=3041562613](https://steamcommunity.com/sharedfiles/filedetails/?id=3041562613)
 
