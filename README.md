@@ -1,9 +1,9 @@
-# JACKLE-More-Less-Lethal-Options
+# JACKLE-More-Less-Lethal-Options Github
 Rimworld Mod. Adds new less/non lethal options including rubber bullet(s)/weapons, for taking people alive this time.
 
-This is my BETA branch, all newest updates will occur here then to Steam later.
+This is my pre-release repository, all newest updates will occur here then to Steam later. Check the branches for possible new stuff.
 
-[JACKLE] More Less Lethal Options
+## [JACKLE] More Less Lethal Options
 
 ![Preview2](https://github.com/jackledead/JACKLE-More-Less-Lethal-Options/assets/75153234/ac6137d6-f0bf-4809-95c2-692f0d389301)
 
@@ -16,13 +16,13 @@ Only works with CE! Combat Extended only!
 Adds new less/non lethal options including rubber bullet(s)/weapons, for taking people alive this time.
 
 Currently:
-Weapons:
-RC-17 "Warden" battle rifle. Ammo: Currently 11mm, will change to a new rifle round.
-RC-21 "Bulldog" bullpup carbine. Ammo: Currently 11mm, will change to a new rifle round.
-RC-43 "Pacifist" full-size pistol. Ammo: 11mm Less Lethal
-RC-5 "Flurry" submachine gun. Ammo: 11mm Less Lethal
-Ammo:
-11mm Less Lethal: Full Rubber, Steel Core Rubber and Hollow Rubber.
+- Weapons:
++ RC-17 "Warden" battle rifle. Ammo: Currently 11mm, will change to a new rifle round.
++ RC-21 "Bulldog" bullpup carbine. Ammo: Currently 11mm, will change to a new rifle round.
++ RC-43 "Pacifist" full-size pistol. Ammo: 11mm Less Lethal
++ RC-5 "Flurry" submachine gun. Ammo: 11mm Less Lethal
+- Ammo:
++ 11mm Less Lethal: Full Rubber, Steel Core Rubber and Hollow Rubber.
 
 Github Link: https://github.com/jackledead/JACKLE-More-Less-Lethal-Options
 
@@ -32,15 +32,15 @@ Current Update: 10.02.23.06
 
 Update log for version 10.02.23.6
 
-Changes:
+Changes: 
 
 - Added RC-43 "Pacifist" pistol and RC-5 "Flurry" SMG
 - Dropped the VWE:Non Lethal dependency including the old rubber ammo in that CE patch.
 - Made a new 11 mm Less Lethal rubber round with 3 variants: Full Rubber (FR), Steel Core Rubber (SCR) and Hollow Rubber (HR)
-- New textures for stacking/storing 11mm Less Lethal ammo
+- New textures for stacking/storing 11mm Less Lethal ammo 
 - Retextured RC-17 "Warden" and RC-21 "Bulldog" to fit new guns
 - New preview image
-- New Research "Rubber Projectiles"
+- New Research "Rubber Projectiles" 
 - RC-17 and RC-21 also require GasOperation
 - New spent casing texture when firing ("fleck")
 - New spent casings texture for filth on ground
