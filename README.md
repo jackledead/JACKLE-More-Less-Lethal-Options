@@ -60,7 +60,7 @@ Questions and Answers:
 
 Known Issues:
 
-- Hediff refers to some code that isnt complied yet, youll get a dev log error every time one of these hits flesh with enough force.
+- Hediff refers to some code that isnt compiled yet, youll get a dev log error every time one of these hits flesh with enough force.
 - May or may not damage mechs, will be fixed soon.
 - The rubber will still kill. Yes. Theyre called less lethal, not non lethal. At least hey dont make holes. Hollow Rubber is the weakest and safest.
 - Balancing issues. Please tell me your thoughts.
