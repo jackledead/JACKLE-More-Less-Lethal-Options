@@ -17,7 +17,7 @@ namespace JackleMLLO
             }
 
             var severity = Props.BaseSeverityPerDamage * parent.Severity / Mathf.Pow(parent.pawn.HealthScale, 2);
-            HealthUtility.AdjustSeverity(parent.pawn, MLLO_HediffDefOf.RubberImpact, severity);
+            HealthUtility.AdjustSeverity(parent.pawn, MLLO_HediffDefOf.MLLORubberImpact, severity);
         }
     }
 }

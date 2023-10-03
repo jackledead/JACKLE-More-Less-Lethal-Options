@@ -6,6 +6,6 @@ namespace JackleMLLO
     [DefOf]
     public static class MLLO_HediffDefOf
     {
-        public static HediffDef RubberImpact;
+        public static HediffDef MLLORubberImpact;
     }
 }
