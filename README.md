@@ -55,7 +55,7 @@ Questions and Answers:
 - Is this compatible with VWE: Non Lethal? Yes.
 - Does pistol round penetrate power armor like in VWE Non Lethal's CE Patch? No.
 - Does the ammo make people bleed? No bleed rate. It's not sharp.
-- How do I make these? Same as other guns, but you need the Rubber Projectiles research. You need GasOperation for the 17 and 21. They take rubber, chemfuel and components. The 11mm ammo is made in increments of 200 and only needs chemfuel and steel.
+- How do I make these? Same as other guns, but you need the Rubber Projectiles research. You need GasOperation for the 17 and 21. They take steel, chemfuel and components. The 11mm ammo is made in increments of 200 and only needs chemfuel and steel.
 - Can I recommend something? Sure but I might not do it. Use the stickied post.
 
 Known Issues:
