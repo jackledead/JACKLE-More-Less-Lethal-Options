@@ -34,7 +34,7 @@
                 <recoilAmount>1.40</recoilAmount>
                 <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>Bullet_11mmLessLethal_FR</defaultProjectile>
+                <defaultProjectile>Bullet_301LessLethal_FR</defaultProjectile>
                 <burstShotCount>3</burstShotCount>
                 <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
                 <warmupTime>0.45</warmupTime>
@@ -48,7 +48,7 @@
             <li Class="CombatExtended.CompProperties_AmmoUser">
                 <magazineSize>25</magazineSize>
                 <reloadTime>5.5</reloadTime>
-                <ammoSet>AmmoSet_11mmLessLethal</ammoSet>
+                <ammoSet>AmmoSet_301LessLethal</ammoSet>
             </li>
             <li Class="CombatExtended.CompProperties_FireModes">
                 <aiUseBurstMode>False</aiUseBurstMode>

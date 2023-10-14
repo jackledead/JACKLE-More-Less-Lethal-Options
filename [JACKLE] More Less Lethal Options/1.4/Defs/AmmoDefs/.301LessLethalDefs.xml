@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingCategoryDef>
+        <defName>Ammo301LessLethalCategory</defName>
+        <label>301 Less Lethal</label>
+        <parent>AmmoPistols</parent>
+        <iconPath>UI/Icons/Ammo/MLLO301IconFR</iconPath>
+        <!-- todo my own ammo graphics -->
+    </ThingCategoryDef>
+    <!-- ==================== AmmoSet ========================== -->
+    <CombatExtended.AmmoSetDef>
+        <defName>AmmoSet_301LessLethal</defName>
+        <label>301 Less Lethal</label>
+        <ammoTypes>
+            <Ammo_301LessLethal_FR>Bullet_301LessLethal_FR</Ammo_301LessLethal_FR>
+            <Ammo_301LessLethal_SCR>Bullet_301LessLethal_SCR</Ammo_301LessLethal_SCR>
+            <Ammo_301LessLethal_HR>Bullet_301LessLethal_HR</Ammo_301LessLethal_HR>
+        </ammoTypes>
+        <similarTo>AmmoSet_Pistol</similarTo>
+    </CombatExtended.AmmoSetDef>
+    <!-- ==================== Ammo ========================== -->
+    <!-- see spreadsheet -->
+    <ThingDef Class="CombatExtended.AmmoDef"
+        Name="Ammo_301LessLethalBase"
+        ParentName="SmallAmmoBase"
+        Abstract="True">
+        <description>A large less-lethal cartridge designed for special riot control pistols and
+            SMGs.</description>
+        <statBases>
+            <Bulk>0.01</Bulk>
+        </statBases>
+        <tradeTags>
+            <li>CE_AutoEnableTrade</li>
+            <li>CE_AutoEnableCrafting</li>
+        </tradeTags>
+        <thingCategories>
+            <li>Ammo301LessLethalCategory</li>
+        </thingCategories>
+    </ThingDef>
+    <!-- Full Rubber -->
+    <ThingDef Class="CombatExtended.AmmoDef"
+        ParentName="Ammo_301LessLethalBase">
+        <defName>Ammo_301LessLethal_FR</defName>
+        <label>.301 Less Lethal (FR)</label>
+        <description>A large, solid rubber less-lethal cartridge designed for riot control pistols
+            and SMGs.</description>
+        <graphicData>
+            <texPath>Ammo/MLLO301Cartridge</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <Mass>0.022</Mass>
+            <MarketValue>0.105</MarketValue>
+        </statBases>
+        <ammoClass>FullRubber</ammoClass>
+        <cookOffProjectile>Bullet_301LessLethal_FR</cookOffProjectile>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>8</damageAmountBase>
+            <armorPenetrationSharp>0</armorPenetrationSharp>
+            <armorPenetrationBlunt>2</armorPenetrationBlunt>
+        </projectile>
+    </ThingDef>
+    <!-- Steel Core Rubber -->
+    <ThingDef Class="CombatExtended.AmmoDef"
+        ParentName="Ammo_301LessLethalBase">
+        <defName>Ammo_301LessLethal_SCR</defName>
+        <label>.301 Less Lethal (SCR)</label>
+        <description>A large pistol cartridge with a complete rubber coating around a steel core.
+            Hits hard.</description>
+        <graphicData>
+            <texPath>Ammo/MLLO301Cartridge</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>0.105</MarketValue>
+            <Mass>0.023</Mass>
+            <!-- TODO: Check prices and mass, SCR should cost more and be heavier than FR -->
+        </statBases>
+        <ammoClass>SteelCoreRubber</ammoClass>
+        <cookOffProjectile>Bullet_301LessLethal_SCR</cookOffProjectile>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>8</damageAmountBase>
+            <armorPenetrationSharp>0</armorPenetrationSharp>
+            <armorPenetrationBlunt>2</armorPenetrationBlunt>
+        </projectile>
+    </ThingDef>
+    <!-- Hollow Rubber -->
+    <ThingDef Class="CombatExtended.AmmoDef"
+        ParentName="Ammo_301LessLethalBase">
+        <defName>Ammo_301LessLethal_HR</defName>
+        <label>.301 Less Lethal (HR)</label>
+        <description>A large pistol and SMG cartridge that fires hollow-rubber, less-lethal bullets
+            designed for riot control. Doesn't damage the body as much as heavier rounds and lacks
+            penetration.</description>
+        <graphicData>
+            <texPath>Ammo/MLLO301Cartridge</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>0.095</MarketValue>
+            <Mass>0.021</Mass>
+        </statBases>
+        <!-- TODO: Check mass and cost in game -->
+        <ammoClass>HollowRubber</ammoClass>
+        <cookOffProjectile>Bullet_301LessLethal_HR</cookOffProjectile>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>8</damageAmountBase>
+            <armorPenetrationSharp>0</armorPenetrationSharp>
+            <armorPenetrationBlunt>2</armorPenetrationBlunt>
+        </projectile>
+    </ThingDef>
+    <!-- ================== Projectiles ================== -->
+    <!-- Note: see spreadsheet -->
+    <!-- 301 Base Bullet projectile, parent -->
+    <ThingDef Name="Base301LessLethalBullet"
+        ParentName="BaseBulletCE"
+        Abstract="true">
+        <graphicData>
+            <texPath>Projectiles/MediumBlueLessLethalBullet/MediumBlueLessLethalBullet</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageDef>LessLethalRubberBluntDamage</damageDef>
+            <speed>40</speed>
+            <!-- VWE NL pistol is speed 32 -->
+            <dropsCasings>true</dropsCasings>
+            <casingMoteDefname>Fleck_301LessLethalAmmoCasings</casingMoteDefname>
+            <casingFilthDefname>Filth_301LessLethalCasings</casingFilthDefname>
+            <!-- TODO: Check in game visuals of fleck and filth -->
+        </projectile>
+    </ThingDef>
+    <!-- 301 FR -->
+    <ThingDef ParentName="Base301LessLethalBullet">
+        <defName>Bullet_301LessLethal_FR</defName>
+        <label>.301 Less Lethal (FR) Bullet</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>8</damageAmountBase>
+            <armorPenetrationSharp>0</armorPenetrationSharp>
+            <armorPenetrationBlunt>2</armorPenetrationBlunt>
+        </projectile>
+    </ThingDef>
+    <!-- 301 SCR -->
+    <ThingDef ParentName="Base301LessLethalBullet">
+        <defName>Bullet_301LessLethal_SCR</defName>
+        <label>301 Less Lethal (SCR) Bullet</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>10</damageAmountBase>
+            <armorPenetrationSharp>0.1</armorPenetrationSharp>
+            <armorPenetrationBlunt>3</armorPenetrationBlunt>
+        </projectile>
+    </ThingDef>
+    <!-- 301 HR -->
+    <ThingDef ParentName="Base301LessLethalBullet">
+        <defName>Bullet_301LessLethal_HR</defName>
+        <label>301 Less Lethal (HR) Bullet</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>5</damageAmountBase>
+            <armorPenetrationSharp>0</armorPenetrationSharp>
+            <armorPenetrationBlunt>1.2</armorPenetrationBlunt>
+        </projectile>
+    </ThingDef>
+    <!-- ==================== Recipes ========================== -->
+    <!-- TODO: check recipes in game. CURRENT RECIPE VALUES ARE PLACEHOLDERS. -->
+    <!-- see spreadsheet -->
+    <RecipeDef Name="JackleLessLethalSmallArmsAmmoRecipeBase"
+        ParentName="AmmoRecipeBase"
+        Abstract="true">
+        <researchPrerequisite>JackleLessLethalRubberProjectilesResearch</researchPrerequisite>
+        <skillRequirements>
+            <Crafting>4</Crafting>
+        </skillRequirements>
+    </RecipeDef>
+    <RecipeDef ParentName="AmmoRecipeBase">
+        <defName>MakeAmmo_301LessLethal_FR</defName>
+        <label>make .301 Less Lethal (FR) cartridge x200</label>
+        <description>Craft x200 .301 Less Lethal Full Rubber (FR) cartridges.</description>
+        <jobString>making .301 Less Lethal (FR) cartridges</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>16</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chemfuel</li>
+                    </thingDefs>
+                </filter>
+                <count>12</count>
+            </li>
+        </ingredients>
+        <products>
+            <Ammo_301LessLethal_FR>200</Ammo_301LessLethal_FR>
+        </products>
+        <workAmount>2000</workAmount>
+    </RecipeDef>
+    <RecipeDef ParentName="AmmoRecipeBase">
+        <defName>MakeAmmo_301LessLethal_SCR</defName>
+        <label>make 301 Less Lethal (SCR) cartridge x200</label>
+        <description>Craft x200 301 Less Lethal Rubber-Jacketed Steel Core (SCR) cartridges.</description>
+        <jobString>making 301 Less Lethal (SCR) cartridges</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>22</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chemfuel</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <products>
+            <Ammo_301LessLethal_SCR>200</Ammo_301LessLethal_SCR>
+        </products>
+        <workAmount>1900</workAmount>
+    </RecipeDef>
+    <RecipeDef ParentName="AmmoRecipeBase">
+        <defName>MakeAmmo_301LessLethal_HR</defName>
+        <label>make 301 Less Lethal (HR) cartridge x200</label>
+        <description>Craft x200 301 Less Lethal Hollow Rubber (HR) cartridges.</description>
+        <jobString>making 301 Less Lethal (HR) cartridges</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>16</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chemfuel</li>
+                    </thingDefs>
+                </filter>
+                <count>9</count>
+            </li>
+        </ingredients>
+        <products>
+            <Ammo_301LessLethal_HR>200</Ammo_301LessLethal_HR>
+        </products>
+        <workAmount>1800</workAmount>
+    </RecipeDef>
+</Defs>
