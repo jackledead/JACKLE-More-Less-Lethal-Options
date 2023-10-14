@@ -45,9 +45,12 @@ Changes:
 - New spent casing texture when firing ("fleck")
 - New spent casings texture for filth on ground
 
-Credits to original authors for some of the gun art I reskinned. Bill Doors and slomow on discord. Art used with permission.
+Credits: 
+Jackledead for mod creation and main design, xml and C# code, Also art for everything besides what is mentioned below.
+LateRusher for code and feedback and design
+Original authors for Warden and Bulldog art, before i reskinned them. Bill Doors and slomow on discord. Art used with permission.
 Font by manador on Ludeon forums
-Special thanks to LateRusher, my dear design partner.
+Oskar Potocki for 1.4 version triangle.
 
 Questions and Answers:
 
@@ -60,8 +63,6 @@ Questions and Answers:
 
 Known Issues:
 
-- Hediff refers to some code that isnt compiled yet, youll get a dev log error every time one of these hits flesh with enough force.
-- May or may not damage mechs, will be fixed soon.
 - The rubber will still kill. Yes. Theyre called less lethal, not non lethal. At least hey dont make holes. Hollow Rubber is the weakest and safest.
 - Balancing issues. Please tell me your thoughts.
 
