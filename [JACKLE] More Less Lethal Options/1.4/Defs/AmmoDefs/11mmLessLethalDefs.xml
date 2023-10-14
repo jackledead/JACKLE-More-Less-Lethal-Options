@@ -46,7 +46,7 @@
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
         <statBases>
-            <Mass>0.022</Mass>
+            <Mass>0.01</Mass>
             <MarketValue>0.1</MarketValue>
         </statBases>
         <ammoClass>FullRubber</ammoClass>
@@ -64,7 +64,7 @@
         </graphicData>
         <statBases>
             <MarketValue>0.105</MarketValue>
-            <Mass>0.023</Mass>
+            <Mass>0.01</Mass>
         </statBases>
         <ammoClass>SteelCoreRubber</ammoClass>
         <cookOffProjectile>Bullet_11mmLessLethal_SCR</cookOffProjectile>
@@ -81,7 +81,7 @@
         </graphicData>
         <statBases>
             <MarketValue>0.095</MarketValue>
-            <Mass>0.021</Mass>
+            <Mass>0.0098</Mass>
         </statBases>
         <ammoClass>HollowRubber</ammoClass>
         <cookOffProjectile>Bullet_11mmLessLethal_HR</cookOffProjectile>
