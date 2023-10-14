@@ -22,7 +22,7 @@
         <defName>Filth_301LessLethalCasings</defName>
         <label>spent less lethal rifle casings</label>
         <graphicData>
-            <texPath>Filth/Filth_LessLethalPistolCasings</texPath>
+            <texPath>Filth/Filth_LessLethalRifleCasings</texPath>
         </graphicData>
         <statBases>
             <Beauty>-15</Beauty>
