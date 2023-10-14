@@ -29,11 +29,9 @@ Github Link: https://github.com/jackledead/JACKLE-More-Less-Lethal-Options
 
 Original Version: 9.26.23.01
 
-Current Update: 10.02.23.07
+Current Update: 10.13.23.07
 
-Update log for version 10.02.23.6
-
-Changes:
+Changes for version 10.02.23.6:
 
 - Added RC-43 "Pacifist" pistol and RC-5 "Flurry" SMG
 - Dropped the VWE:Non Lethal dependency including the old rubber ammo in that CE patch.
@@ -46,14 +44,18 @@ Changes:
 - New spent casing texture when firing ("fleck")
 - New spent casings texture for filth on ground
 
-+ 10/13/2023-7
++ Changes for version 10.13.23.07
+
 - Added .301 Less Lethal rubber round with 3 variants: Full Rubber (FR), Steel Core Rubber (SCR) and Hollow Rubber (HR)
 - New textures for stacking/storing .301 Less Lethal ammo
 - RC-17 "Warden" and RC-21 "Bulldog" now use new .301 LL rifle caliber ammo. Ammo loaded into these guns previously will fire, but will need the new .301LL ammo to reload.
 
-Credits to original authors for some of the gun art I reskinned. Bill Doors and slomow on discord. Art used with permission.
-Font by manador on Ludeon forums
-Special thanks to LateRusher, my dear design partner.
+Credits: 
+- Jackledead for mod creation and main design, xml and C# code, Also art for everything besides what is mentioned below.
+- LateRusher for code and feedback and design
+- Original authors for Warden and Bulldog art, before i reskinned them. Bill Doors and slomow on discord. Art used with permission.
+- Font by manador on Ludeon forums
+- Oskar Potocki for 1.4 version triangle.
 
 Questions and Answers:
 
