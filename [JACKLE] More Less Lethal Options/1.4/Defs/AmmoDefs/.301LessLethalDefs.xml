@@ -5,7 +5,6 @@
         <label>301 Less Lethal</label>
         <parent>AmmoPistols</parent>
         <iconPath>UI/Icons/Ammo/MLLO301IconFR</iconPath>
-        <!-- todo my own ammo graphics -->
     </ThingCategoryDef>
     <!-- ==================== AmmoSet ========================== -->
     <CombatExtended.AmmoSetDef>
@@ -20,12 +19,12 @@
     </CombatExtended.AmmoSetDef>
     <!-- ==================== Ammo ========================== -->
     <!-- see spreadsheet -->
+    <!-- NOTE: these were using the old pistol descriptions, so I changed them to rifle. -->
     <ThingDef Class="CombatExtended.AmmoDef"
         Name="Ammo_301LessLethalBase"
         ParentName="SmallAmmoBase"
         Abstract="True">
-        <description>A large less-lethal cartridge designed for special riot control pistols and
-            SMGs.</description>
+        <description>A less-lethal cartridge designed for special riot rfiles.</description>
         <statBases>
             <Bulk>0.01</Bulk>
         </statBases>
@@ -42,8 +41,7 @@
         ParentName="Ammo_301LessLethalBase">
         <defName>Ammo_301LessLethal_FR</defName>
         <label>.301 Less Lethal (FR)</label>
-        <description>A large, solid rubber less-lethal cartridge designed for riot control pistols
-            and SMGs.</description>
+        <description>A solid rubber less-lethal cartridge designed for riot control rifles.</description>
         <graphicData>
             <texPath>Ammo/MLLO301Cartridge</texPath>
             <graphicClass>Graphic_StackCount</graphicClass>
@@ -65,7 +63,7 @@
         ParentName="Ammo_301LessLethalBase">
         <defName>Ammo_301LessLethal_SCR</defName>
         <label>.301 Less Lethal (SCR)</label>
-        <description>A large pistol cartridge with a complete rubber coating around a steel core.
+        <description>A rifle cartridge. The bullet has a complete rubber coating around a steel core.
             Hits hard.</description>
         <graphicData>
             <texPath>Ammo/MLLO301Cartridge</texPath>
@@ -89,7 +87,7 @@
         ParentName="Ammo_301LessLethalBase">
         <defName>Ammo_301LessLethal_HR</defName>
         <label>.301 Less Lethal (HR)</label>
-        <description>A large pistol and SMG cartridge that fires hollow-rubber, less-lethal bullets
+        <description>A rifle cartridge that fires hollow-rubber, less-lethal bullets
             designed for riot control. Doesn't damage the body as much as heavier rounds and lacks
             penetration.</description>
         <graphicData>
@@ -160,8 +158,9 @@
         </projectile>
     </ThingDef>
     <!-- ==================== Recipes ========================== -->
-    <!-- TODO: check recipes in game. CURRENT RECIPE VALUES ARE PLACEHOLDERS. -->
+    <!-- TODO: check recipes in game. CURRENT RECIPE VALUES ARE rough draft. -->
     <!-- see spreadsheet -->
+    <!-- NOTE: I raised the steel costs vs the 11mm. chemfuel costs should stay the same. -->
     <RecipeDef Name="JackleLessLethalSmallArmsAmmoRecipeBase"
         ParentName="AmmoRecipeBase"
         Abstract="true">
@@ -182,7 +181,7 @@
                         <li>Steel</li>
                     </thingDefs>
                 </filter>
-                <count>16</count>
+                <count>20</count>
             </li>
             <li>
                 <filter>
@@ -201,7 +200,7 @@
     <RecipeDef ParentName="AmmoRecipeBase">
         <defName>MakeAmmo_301LessLethal_SCR</defName>
         <label>make 301 Less Lethal (SCR) cartridge x200</label>
-        <description>Craft x200 301 Less Lethal Rubber-Jacketed Steel Core (SCR) cartridges.</description>
+        <description>Craft x200 .301 Less Lethal Rubber-Jacketed Steel Core (SCR) cartridges.</description>
         <jobString>making 301 Less Lethal (SCR) cartridges</jobString>
         <ingredients>
             <li>
@@ -210,7 +209,7 @@
                         <li>Steel</li>
                     </thingDefs>
                 </filter>
-                <count>22</count>
+                <count>25</count>
             </li>
             <li>
                 <filter>
@@ -229,7 +228,7 @@
     <RecipeDef ParentName="AmmoRecipeBase">
         <defName>MakeAmmo_301LessLethal_HR</defName>
         <label>make 301 Less Lethal (HR) cartridge x200</label>
-        <description>Craft x200 301 Less Lethal Hollow Rubber (HR) cartridges.</description>
+        <description>Craft x200 .301 Less Lethal Hollow Rubber (HR) cartridges.</description>
         <jobString>making 301 Less Lethal (HR) cartridges</jobString>
         <ingredients>
             <li>
@@ -238,7 +237,7 @@
                         <li>Steel</li>
                     </thingDefs>
                 </filter>
-                <count>16</count>
+                <count>20</count>
             </li>
             <li>
                 <filter>
@@ -254,4 +253,5 @@
         </products>
         <workAmount>1800</workAmount>
     </RecipeDef>
+    
 </Defs>
