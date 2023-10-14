@@ -47,7 +47,7 @@
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
         <statBases>
-            <Mass>0.022</Mass>
+            <Mass>0.01</Mass>
             <MarketValue>0.105</MarketValue>
         </statBases>
         <ammoClass>FullRubber</ammoClass>
@@ -71,7 +71,7 @@
         </graphicData>
         <statBases>
             <MarketValue>0.105</MarketValue>
-            <Mass>0.023</Mass>
+            <Mass>0.01</Mass>
             <!-- TODO: Check prices and mass, SCR should cost more and be heavier than FR -->
         </statBases>
         <ammoClass>SteelCoreRubber</ammoClass>
@@ -96,7 +96,7 @@
         </graphicData>
         <statBases>
             <MarketValue>0.095</MarketValue>
-            <Mass>0.021</Mass>
+            <Mass>0.0098</Mass>
         </statBases>
         <!-- TODO: Check mass and cost in game -->
         <ammoClass>HollowRubber</ammoClass>
