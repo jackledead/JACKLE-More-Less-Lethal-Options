@@ -16,7 +16,7 @@
     <FleckDef ParentName="FleckBase_Thrown">
 		<defName>Fleck_301LessLethalAmmoCasings</defName>
 		<graphicData>
-			<texPath>Fleck/Fleck_LessLethalPistolCasing</texPath>
+			<texPath>Fleck/Fleck_LessLethalRifleCasing</texPath>
 			<renderInstanced>true</renderInstanced>
 		</graphicData>
 		<altitudeLayer>MoteOverhead</altitudeLayer>

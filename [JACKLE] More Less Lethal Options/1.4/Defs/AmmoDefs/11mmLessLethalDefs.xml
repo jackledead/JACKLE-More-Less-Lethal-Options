@@ -5,7 +5,6 @@
         <label>11mm Less Lethal</label>
         <parent>AmmoPistols</parent>
         <iconPath>UI/Icons/Ammo/MLLO11mmIconFR</iconPath>
-        <!-- todo my own ammo graphics -->
     </ThingCategoryDef>
     <!-- ==================== AmmoSet ========================== -->
     <CombatExtended.AmmoSetDef>
@@ -36,7 +35,7 @@
             <li>Ammo11mmLessLethalCategory</li>
         </thingCategories>
     </ThingDef>
-    <!-- Solid Rubber -->
+    <!-- Full Rubber -->
     <ThingDef Class="CombatExtended.AmmoDef"
               ParentName="Ammo_11mmLessLethalBase">
         <defName>Ammo_11mmLessLethal_FR</defName>
@@ -44,17 +43,16 @@
         <description>A large, solid rubber less-lethal cartridge designed for riot control pistols and SMGs.</description>
         <graphicData>
             <texPath>Ammo/MLLO11mmCartridge</texPath>
-            <!-- TODO: New Texture Please -->
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
         <statBases>
-            <Mass>0.022</Mass>
+            <Mass>0.01</Mass>
             <MarketValue>0.1</MarketValue>
         </statBases>
         <ammoClass>FullRubber</ammoClass>
         <cookOffProjectile>Bullet_11mmLessLethal_FR</cookOffProjectile>
     </ThingDef>
-    <!-- Full Rubber Jacket -->
+    <!-- Steel Core Rubber -->
     <ThingDef Class="CombatExtended.AmmoDef"
               ParentName="Ammo_11mmLessLethalBase">
         <defName>Ammo_11mmLessLethal_SCR</defName>
@@ -62,13 +60,11 @@
         <description>A large pistol cartridge with a complete rubber coating around a steel core. Hits hard.</description>
         <graphicData>
             <texPath>Ammo/MLLO11mmCartridge</texPath>
-            <!-- TODO: Implement the New Graphic, check stack graphics at 1, 2-499 and 5000. -->
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
         <statBases>
             <MarketValue>0.105</MarketValue>
-            <Mass>0.023</Mass>
-            <!-- TODO: Check prices and mass, SCR should cost more and be havier than FR -->
+            <Mass>0.01</Mass>
         </statBases>
         <ammoClass>SteelCoreRubber</ammoClass>
         <cookOffProjectile>Bullet_11mmLessLethal_SCR</cookOffProjectile>
@@ -81,14 +77,12 @@
         <description>A large pistol and SMG cartridge that fires hollow-rubber, less-lethal bullets designed for riot control. Doesn't damage the body as much as heavier rounds and lacks penetration.</description>
         <graphicData>
             <texPath>Ammo/MLLO11mmCartridge</texPath>
-            <!-- TODO New Graphic -->
             <graphicClass>Graphic_StackCount</graphicClass>
         </graphicData>
         <statBases>
             <MarketValue>0.095</MarketValue>
-            <Mass>0.021</Mass>
+            <Mass>0.0098</Mass>
         </statBases>
-        <!-- TODO: Check mass and cost in game -->
         <ammoClass>HollowRubber</ammoClass>
         <cookOffProjectile>Bullet_11mmLessLethal_HR</cookOffProjectile>
     </ThingDef>
@@ -109,10 +103,8 @@
             <dropsCasings>true</dropsCasings>
             <casingMoteDefname>Fleck_11mmLessLethalAmmoCasings</casingMoteDefname>
             <casingFilthDefname>Filth_11mmLessLethalCasings</casingFilthDefname>
-            <!-- TODO: Check in game visuals of fleck and filth -->
         </projectile>
     </ThingDef>
-    <!-- TODO: for the 11mm family, figure out muscle spasm BS. i think i did it? 9/29/23 8:40 AM -->
     <!-- 11mm FR -->
     <ThingDef ParentName="Base11mmLessLethalBullet">
         <defName>Bullet_11mmLessLethal_FR</defName>
@@ -144,7 +136,6 @@
         </projectile>
     </ThingDef>
     <!-- ==================== Recipes ========================== -->
-    <!-- TODO: check recipes in game -->
     <!-- see spreadsheet -->
     <RecipeDef Name="JackleLessLethalSmallArmsAmmoRecipeBase"
                ParentName="AmmoRecipeBase"

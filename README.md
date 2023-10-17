@@ -9,7 +9,7 @@ This is my pre-release repository, all newest updates will occur here then to St
 
 ![MLLO retextures 10 2 23](https://github.com/jackledead/JACKLE-More-Less-Lethal-Options/assets/75153234/9a18e076-0237-445c-b64a-0bc391313ede)
 
-READ ME READ ME
+## READ ME READ ME
 
 Only works with CE! Combat Extended only!
 
@@ -17,42 +17,48 @@ Adds new less/non lethal options including rubber bullet(s)/weapons, for taking 
 
 Currently:
 - Weapons:
-+ RC-17 "Warden" battle rifle. Ammo: Currently 11mm, will change to a new rifle round.
-+ RC-21 "Bulldog" bullpup carbine. Ammo: Currently 11mm, will change to a new rifle round.
++ RC-17 "Warden" battle rifle. Ammo: .301 Less Lethal.
++ RC-21 "Bulldog" bullpup carbine. Ammo: .301 Less Lethal.
 + RC-43 "Pacifist" full-size pistol. Ammo: 11mm Less Lethal
 + RC-5 "Flurry" submachine gun. Ammo: 11mm Less Lethal
 - Ammo:
 + 11mm Less Lethal: Full Rubber, Steel Core Rubber and Hollow Rubber.
++ .301 Less Lethal: Full Rubber, Steel Core Rubber and Hollow Rubber.
 
 Github Link: https://github.com/jackledead/JACKLE-More-Less-Lethal-Options
 
+### Version History and Updates
 Original Version: 9.26.23.01
 
-Current Update: 10.02.23.06
+Current Update: 10.13.23.07
 
-Update log for version 10.02.23.6
-
-Changes: 
+### Changes for version 10.02.23.6:
 
 - Added RC-43 "Pacifist" pistol and RC-5 "Flurry" SMG
 - Dropped the VWE:Non Lethal dependency including the old rubber ammo in that CE patch.
 - Made a new 11 mm Less Lethal rubber round with 3 variants: Full Rubber (FR), Steel Core Rubber (SCR) and Hollow Rubber (HR)
-- New textures for stacking/storing 11mm Less Lethal ammo 
+- New textures for stacking/storing 11mm Less Lethal ammo
 - Retextured RC-17 "Warden" and RC-21 "Bulldog" to fit new guns
 - New preview image
-- New Research "Rubber Projectiles" 
+- New Research "Rubber Projectiles"
 - RC-17 and RC-21 also require GasOperation
 - New spent casing texture when firing ("fleck")
 - New spent casings texture for filth on ground
 
-Credits: 
-Jackledead for mod creation and main design, xml and C# code, Also art for everything besides what is mentioned below.
-LateRusher for code and feedback and design
-Original authors for Warden and Bulldog art, before i reskinned them. Bill Doors and slomow on discord. Art used with permission.
-Font by manador on Ludeon forums
-Oskar Potocki for 1.4 version triangle.
+### Changes for version 10.13.23.07
 
-Questions and Answers:
+- Added .301 Less Lethal rubber round with 3 variants: Full Rubber (FR), Steel Core Rubber (SCR) and Hollow Rubber (HR)
+- New textures for stacking/storing .301 Less Lethal ammo
+- RC-17 "Warden" and RC-21 "Bulldog" now use new .301 LL rifle caliber ammo. Ammo loaded into these guns previously will fire, but will need the new .301LL ammo to reload.
+
+### Credits: 
+- Jackledead for mod creation and main design, xml and C# code, Also art for everything besides what is mentioned below.
+- LateRusher for code and feedback and design
+- Original authors for Warden and Bulldog art, before i reskinned them. Bill Doors and slomow on discord. Art used with permission.
+- Font by manador on Ludeon forums
+- Oskar Potocki for 1.4 version triangle.
+
+### Questions and Answers:
 
 - Does this work with CE? It only works with CE.
 - Is this compatible with VWE: Non Lethal? Yes.
@@ -69,4 +75,3 @@ Known Issues:
 Thanks for checking out my mod. Message me on discord if you really need me. I'm in the rimworld and CE server.
 
 [https://steamcommunity.com/sharedfiles/filedetails/?id=3041562613](https://steamcommunity.com/sharedfiles/filedetails/?id=3041562613)
-
