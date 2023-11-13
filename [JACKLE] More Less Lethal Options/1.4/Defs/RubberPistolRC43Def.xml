@@ -3,7 +3,7 @@
     <ThingDef ParentName="BaseHumanMakeableGun">
         <defName>LessLethalRC43Pacifist</defName>
         <label>RC-43 "Pacifist"</label>
-        <description>A compact pistol designed to fire less-lethal .43 caliber rubber bullets. The RC-43 "Pacifist" is ideal for crowd control and non-lethal engagements.</description>
+        <description>A compact pistol designed to fire less-lethal 11mm caliber rubber bullets. The RC-43 "Pacifist" is ideal for crowd control and non-lethal engagements.</description>
         <graphicData>
             <texPath>Guns/RC43PacifistF</texPath>
             <!-- TODO: make this path to the new Pistol art -->
@@ -68,6 +68,7 @@
         </thingSetMakerTags>
         <weaponTags Inherit="False">
             <li>NonLethal</li>
+            <li>CE_OneHandedWeapon</li>
         </weaponTags>
     </ThingDef>
 </Defs>
