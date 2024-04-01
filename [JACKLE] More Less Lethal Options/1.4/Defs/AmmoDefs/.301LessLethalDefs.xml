@@ -3,8 +3,8 @@
     <ThingCategoryDef>
         <defName>Ammo301LessLethalCategory</defName>
         <label>301 Less Lethal</label>
-        <parent>AmmoPistols</parent>
-        <iconPath>UI/Icons/Ammo/MLLO301IconFR</iconPath>
+        <parent>AmmoRifles</parent>
+        <iconPath>UI/Icons/Ammo/MLLO301LLCartridgeIconUI</iconPath>
     </ThingCategoryDef>
     <!-- ==================== AmmoSet ========================== -->
     <CombatExtended.AmmoSetDef>
@@ -15,7 +15,7 @@
             <Ammo_301LessLethal_SCR>Bullet_301LessLethal_SCR</Ammo_301LessLethal_SCR>
             <Ammo_301LessLethal_HR>Bullet_301LessLethal_HR</Ammo_301LessLethal_HR>
         </ammoTypes>
-        <similarTo>AmmoSet_Pistol</similarTo>
+        <similarTo>AmmoSet_RifleIntermediate</similarTo>
     </CombatExtended.AmmoSetDef>
     <!-- ==================== Ammo ========================== -->
     <!-- see spreadsheet -->
@@ -101,11 +101,6 @@
         <!-- TODO: Check mass and cost in game -->
         <ammoClass>HollowRubber</ammoClass>
         <cookOffProjectile>Bullet_301LessLethal_HR</cookOffProjectile>
-        <projectile Class="CombatExtended.ProjectilePropertiesCE">
-            <damageAmountBase>8</damageAmountBase>
-            <armorPenetrationSharp>0</armorPenetrationSharp>
-            <armorPenetrationBlunt>2</armorPenetrationBlunt>
-        </projectile>
     </ThingDef>
     <!-- ================== Projectiles ================== -->
     <!-- Note: see spreadsheet -->
@@ -163,7 +158,7 @@
     <!-- TODO: check recipes in game. CURRENT RECIPE VALUES ARE rough draft. -->
     <!-- see spreadsheet -->
     <!-- NOTE: I raised the steel costs vs the 11mm. chemfuel costs should stay the same. -->
-    <RecipeDef Name="JackleLessLethalSmallArmsAmmoRecipeBase"
+    <RecipeDef Name="JackleLessLethal301ArmsAmmoRecipeBase"
         ParentName="AmmoRecipeBase"
         Abstract="true">
         <researchPrerequisite>JackleLessLethalRubberProjectilesResearch</researchPrerequisite>

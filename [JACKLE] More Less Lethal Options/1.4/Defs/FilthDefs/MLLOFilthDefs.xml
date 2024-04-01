@@ -40,7 +40,7 @@
         <defName>Filth_60BigRubberCasings</defName>
         <label>spent big rubber casings</label>
         <graphicData>
-            <texPath>Filth/Filth_LessLethalPistolCasings</texPath>
+            <texPath>Filth/Filth_LessLethalBigRubberCasings</texPath>
         </graphicData>
         <statBases>
             <Beauty>-15</Beauty>
