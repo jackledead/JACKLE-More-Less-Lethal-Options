@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <HediffDef ParentName="Bruise">
+        <defName>MLLOBruiseRubber</defName>
+        <label>rubber impact bruise</label>
+        <labelNoun>a rubber impact bruise</labelNoun>
+        <comps>
+            <li Class="JackleMLLO.HediffCompProperties_MLLORubber" />
+        </comps>
+    </HediffDef>
+    <HediffDef ParentName="Crack">
+        <defName>MLLOCrackRubber</defName>
+        <label>rubber impact crack</label>
+        <labelNoun>a rubber impact crack</labelNoun>
+        <comps>
+            <li Class="JackleMLLO.HediffCompProperties_MLLORubber" />
+        </comps>
+    </HediffDef>
+    <!-- MLLORubberImpact main def -->
+    <HediffDef>
+        <defName>MLLORubberImpact</defName>
+        <label>rubber impact</label>
+        <description>bruises and cracks from rubber bullet damage causing extra pain</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <comps>
+            <li Class="JackleMLLO.HediffCompProperties_MLLORubber" />
+            <!-- todo, test rubber impact stuff -->
+            <li Class="CombatExtended.HediffCompProperties_FleshOnly" />
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>
+                    <min>700</min>
+                    <max>2000</max>
+                    <!-- reduced from MuscleSpasms' 1200 and 2100 -->
+                </disappearsAfterTicks>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>trivial</label>
+            </li>
+            <li>
+                <minSeverity>0.2</minSeverity>
+                <label>minor</label>
+                <capMods>
+                    <!-- Reduced from ce's muscle spasm offest of .25 -->
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.1</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.1</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.40</minSeverity>
+                <!-- start +3% pain factor -->
+                <painFactor>1.03</painFactor>
+                <label>moderate</label>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.3</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.3</offset>
+                        <!-- was .5 -->
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.6</minSeverity>
+                <!-- +4% pain factor -->
+                <painFactor>1.04</painFactor>
+                <label>severe</label>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <setMax>0.35</setMax>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <setMax>0.35</setMax>
+                        <!-- was .1 -->
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.8</minSeverity>
+                <!-- +5% pain factor at most -->
+                <painFactor>1.05</painFactor>
+                <label>extreme</label>
+                <lifeThreatening>true</lifeThreatening>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <setMax>0.1</setMax>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <setMax>0.05</setMax>
+                        <!-- was 0 -->
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+</Defs>

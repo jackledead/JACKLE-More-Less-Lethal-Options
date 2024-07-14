@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <CombatExtended.AmmoCategoryDef>
+        <defName>FullRubber</defName>
+        <label>full rubber bullet</label>
+        <labelShort>FR</labelShort>
+        <description>Completely solid rubber bullet with a smaller gunpowder load for less lethal performance.</description>
+    </CombatExtended.AmmoCategoryDef>
+    <CombatExtended.AmmoCategoryDef>
+        <defName>SteelCoreRubber</defName>
+        <label>steel core rubber bullet</label>
+        <labelShort>SCR</labelShort>
+        <description>Less lethal rubber-jacketed round featuring a hardened steel core for increased mass, inertia and stopping power.</description>
+    </CombatExtended.AmmoCategoryDef>
+    <CombatExtended.AmmoCategoryDef>
+        <defName>HollowRubber</defName>
+        <label>hollow rubber bullet</label>
+        <labelShort>HR</labelShort>
+        <description>Hollow rubber bullet with less mass and stopping power than solid rubber. Used to quell riots without killing or violently maiming.</description>
+    </CombatExtended.AmmoCategoryDef>
+</Defs>

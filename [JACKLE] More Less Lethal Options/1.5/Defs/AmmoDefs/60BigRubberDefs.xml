@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingCategoryDef>
+        <defName>Ammo60BigRubberCategory</defName>
+        <label>.60 Big Rubber</label>
+        <parent>AmmoHighCaliber</parent>
+        <iconPath>UI/Icons/Ammo/MLLO60BRIconFR</iconPath>
+    </ThingCategoryDef>
+    <!-- ==================== AmmoSet ========================== -->
+    <CombatExtended.AmmoSetDef>
+        <defName>AmmoSet_60BigRubber</defName>
+        <label>.60 Big Rubber
+        </label>
+        <ammoTypes>
+            <Ammo_60BigRubber_FR>Bullet_60BigRubber_FR</Ammo_60BigRubber_FR>
+            <Ammo_60BigRubber_SCR>Bullet_60BigRubber_SCR</Ammo_60BigRubber_SCR>
+            <Ammo_60BigRubber_HR>Bullet_60BigRubber_HR</Ammo_60BigRubber_HR>
+        </ammoTypes>
+        <similarTo>AmmoSet_AntiMateriel</similarTo>
+    </CombatExtended.AmmoSetDef>
+    <!-- ==================== Ammo ========================== -->
+    <!-- see spreadsheet -->
+    <ThingDef Class="CombatExtended.AmmoDef"
+        Name="Ammo_60BigRubberBase"
+        ParentName="MediumAmmoBase"
+        Abstract="True">
+        <description>A special high mass rubber round designed for incapacitating intimidating targets.</description>
+        <statBases>
+            <Bulk>0.14</Bulk>
+        </statBases>
+        <tradeTags>
+            <li>CE_AutoEnableTrade</li>
+            <li>CE_AutoEnableCrafting</li>
+        </tradeTags>
+        <thingCategories>
+            <li>Ammo60BigRubberCategory</li>
+        </thingCategories>
+    </ThingDef>
+    <!-- Full Rubber -->
+    <ThingDef Class="CombatExtended.AmmoDef"
+        ParentName="Ammo_60BigRubberBase">
+        <defName>Ammo_60BigRubber_FR</defName>
+        <label>.60 Big Rubber (FR)</label>
+        <description>A large caliber solid rubber less-lethal cartridge designed for extended range riot control rifles. Packs a heavy blunt force impact that can incapacitate subjects from afar.</description>
+        <graphicData>
+            <texPath>Ammo/MLLO60BRCartridge</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <Mass>0.118</Mass>
+            <MarketValue>0.5</MarketValue>
+        </statBases>
+        <ammoClass>FullRubber</ammoClass>
+        <cookOffProjectile>Bullet_60BigRubber_FR</cookOffProjectile>
+    </ThingDef>
+    <!-- Steel Core Rubber -->
+    <ThingDef Class="CombatExtended.AmmoDef"
+        ParentName="Ammo_60BigRubberBase">
+        <defName>Ammo_60BigRubber_SCR</defName>
+        <label>.60 Big Rubber (SCR)</label>
+        <description>A heavy rifle round with a solid rubber coating around a dense steel core. Designed to retain accuracy over long distances while delivering a hard, incapacitating blow. The core adds weight for maximizing less-lethal impact.</description>
+        <graphicData>
+            <texPath>Ammo/MLLO60BRCartridge</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>0.51</MarketValue>
+            <Mass>0.121</Mass>
+            <!-- TODO: Check prices and mass, SCR should cost more and be heavier than FR -->
+        </statBases>
+        <ammoClass>SteelCoreRubber</ammoClass>
+        <cookOffProjectile>Bullet_60BigRubber_SCR</cookOffProjectile>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>8</damageAmountBase>
+            <armorPenetrationSharp>0</armorPenetrationSharp>
+            <armorPenetrationBlunt>2</armorPenetrationBlunt>
+        </projectile>
+    </ThingDef>
+    <!-- Hollow Rubber -->
+    <ThingDef Class="CombatExtended.AmmoDef"
+        ParentName="Ammo_60BigRubberBase">
+        <defName>Ammo_60BigRubber_HR</defName>
+        <label>.60 Big Rubber (HR)</label>
+        <description>A lightweight hollow rubber round for .60 caliber riot control rifles. The hollow design reduces its blunt impact force but allows it to travel faster and further. Lacks the stopping power of heavier variants.</description>
+        <graphicData>
+            <texPath>Ammo/MLLO60BRCartridge</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>0.48</MarketValue>
+            <Mass>0.108</Mass>
+        </statBases>
+        <!-- TODO: Check mass and cost in game -->
+        <ammoClass>HollowRubber</ammoClass>
+        <cookOffProjectile>Bullet_60BigRubber_HR</cookOffProjectile>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>8</damageAmountBase>
+            <armorPenetrationSharp>0</armorPenetrationSharp>
+            <armorPenetrationBlunt>2</armorPenetrationBlunt>
+        </projectile>
+    </ThingDef>
+    <!-- ================== Projectiles ================== -->
+    <!-- Note: see spreadsheet -->
+    <ThingDef Name="Base60BigRubberBullet"
+        ParentName="BaseBulletCE"
+        Abstract="true">
+        <graphicData>
+            <texPath>Projectiles/BigRubberBullet/60BigRubberProjectile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageDef>LessLethalRubberBluntDamage</damageDef>
+            <speed>150</speed>
+            <!-- TODO: TEST SPEED IN GAME, SEE IF IT MAKES DIFFERENC ON MOVING TARGETS vs 11mm -->
+            <!-- 11mm is 40 speed -->
+            <!-- VWE NL pistol is speed 32 -->
+            <!-- 50 bmg speed is 168 -->
+            <dropsCasings>true</dropsCasings>
+            <casingMoteDefname>Fleck_60BigRubberAmmoCasings</casingMoteDefname>
+            <casingFilthDefname>Filth_60BigRubberCasings</casingFilthDefname>
+            <!-- TODO: Check in game visuals of fleck and filth -->
+        </projectile>
+    </ThingDef>
+    <!-- FR -->
+    <ThingDef ParentName="Base60BigRubberBullet">
+        <defName>Bullet_60BigRubber_FR</defName>
+        <label>.60 Big Rubber (FR) Bullet</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>20</damageAmountBase>
+            <armorPenetrationSharp>0.2</armorPenetrationSharp>
+            <armorPenetrationBlunt>20</armorPenetrationBlunt>
+        </projectile>
+    </ThingDef>
+    <!-- SCR -->
+    <ThingDef ParentName="Base60BigRubberBullet">
+        <defName>Bullet_60BigRubber_SCR</defName>
+        <label>.60 Big Rubber (SCR) Bullet</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>25</damageAmountBase>
+            <armorPenetrationSharp>0.25</armorPenetrationSharp>
+            <armorPenetrationBlunt>30</armorPenetrationBlunt>
+        </projectile>
+    </ThingDef>
+    <!-- HR -->
+    <ThingDef ParentName="Base60BigRubberBullet">
+        <defName>Bullet_60BigRubber_HR</defName>
+        <label>.60 Big Rubber (HR) Bullet</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>18</damageAmountBase>
+            <armorPenetrationSharp>0</armorPenetrationSharp>
+            <armorPenetrationBlunt>18</armorPenetrationBlunt>
+        </projectile>
+    </ThingDef>
+    <!-- ==================== Recipes ========================== -->
+    <!-- TODO: check recipes in game. CURRENT RECIPE VALUES ARE rough draft. -->
+    <!-- see spreadsheet -->
+    <RecipeDef Name="JackleLessLethalBigRubberAmmoRecipeBase"
+        ParentName="AmmoRecipeBase"
+        Abstract="true">
+        <researchPrerequisite>JackleLessLethalRubberProjectilesResearch</researchPrerequisite>
+        <skillRequirements>
+            <Crafting>4</Crafting>
+        </skillRequirements>
+    </RecipeDef>
+    <RecipeDef ParentName="AmmoRecipeBase">
+        <defName>MakeAmmo_60BigRubber_FR</defName>
+        <label>make .60 Big Rubber (FR) cartridge x200</label>
+        <description>Craft x200 .60 Big Rubber Full Rubber (FR) cartridges.</description>
+        <jobString>making .60 Big Rubber (FR) cartridges</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>45</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chemfuel</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
+        <products>
+            <Ammo_60BigRubber_FR>200</Ammo_60BigRubber_FR>
+        </products>
+        <workAmount>5000</workAmount>
+    </RecipeDef>
+    <RecipeDef ParentName="AmmoRecipeBase">
+        <defName>MakeAmmo_60BigRubber_SCR</defName>
+        <label>make .60 Big Rubber (SCR) cartridge x200</label>
+        <description>Craft x200 .60 Big Rubber Rubber-Jacketed Steel Core (SCR) cartridges.</description>
+        <jobString>making .60 Big Rubber (SCR) cartridges</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chemfuel</li>
+                    </thingDefs>
+                </filter>
+                <count>15</count>
+            </li>
+        </ingredients>
+        <products>
+            <Ammo_60BigRubber_SCR>200</Ammo_60BigRubber_SCR>
+        </products>
+        <workAmount>5000</workAmount>
+    </RecipeDef>
+    <RecipeDef ParentName="AmmoRecipeBase">
+        <defName>MakeAmmo_60BigRubber_HR</defName>
+        <label>make .60 Big Rubber (HR) cartridge x200</label>
+        <description>Craft x200 .60 Big Rubber Hollow Rubber (HR) cartridges.</description>
+        <jobString>making .60 Big Rubber (HR) cartridges</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>45</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chemfuel</li>
+                    </thingDefs>
+                </filter>
+                <count>12</count>
+            </li>
+        </ingredients>
+        <products>
+            <Ammo_60BigRubber_HR>200</Ammo_60BigRubber_HR>
+        </products>
+        <workAmount>5000</workAmount>
+    </RecipeDef>
+    
+</Defs>

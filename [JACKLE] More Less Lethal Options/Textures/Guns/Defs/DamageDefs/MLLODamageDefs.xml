@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <DamageDef Name="DamageLessLethalRubberBase">
+        <defName>LessLethalRubberBluntDamage</defName>
+        <label>less lethal blunt</label>
+        <workerClass>DamageWorker_Blunt</workerClass>
+        <!-- TODO: Balance this mess -->
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has been subjugated to death.</deathMessage>
+        <hediff>MLLORubberImpact</hediff>
+        <hediffSkin>MLLOBruiseRubber</hediffSkin>
+        <hediffSolid>MLLOCrackRubber</hediffSolid>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <impactSoundType>Bullet</impactSoundType>
+        <armorCategory>Blunt</armorCategory>
+        <overkillPctToDestroyPart>1.0~1.6</overkillPctToDestroyPart>
+        <buildingDamageFactor>0.25</buildingDamageFactor>
+        <plantDamageFactor>0.25</plantDamageFactor>
+        <bluntStunDuration>1.6</bluntStunDuration>
+        <bluntInnerHitChance>0.05</bluntInnerHitChance>
+        <bluntInnerHitDamageFractionToConvert>0.01~0.02</bluntInnerHitDamageFractionToConvert>
+        <bluntInnerHitDamageFractionToAdd>0.01~0.05</bluntInnerHitDamageFractionToAdd>
+        <bluntStunChancePerDamagePctOfCorePartToHeadCurve>
+            <points>
+                <li>(0.04, 0.15)</li>
+                <li>(0.4, .92)</li>
+            </points>
+        </bluntStunChancePerDamagePctOfCorePartToHeadCurve>
+        <bluntStunChancePerDamagePctOfCorePartToBodyCurve>
+            <points>
+                <li>(0.4, 0)</li>
+                <li>(0.8, 0.15)</li>
+            </points>
+        </bluntStunChancePerDamagePctOfCorePartToBodyCurve>
+        <isRanged>true</isRanged>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+    </DamageDef>
+</Defs>

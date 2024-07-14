@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>RC60Hippo</defName>
+        <label>RC-60 "Hippo"</label>
+        <description>An extraordinary semi-automatic precision rifle, the RC60 "Hippo" is engineered to unleash the power of less-lethal .60 Big Rubber rounds with exceptional force. Designed for extreme range engagements, its high magnification scope ensures pinpoint accuracy during long-range riot suppression.</description>
+        <graphicData>
+            <texPath>Guns/RC60Hippo</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1.8, 1.8)</drawSize>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <statBases>
+            <Mass>14</Mass>
+            <RangedWeapon_Cooldown>0.65</RangedWeapon_Cooldown>
+            <SightsEfficiency>3</SightsEfficiency>
+            <ShotSpread>0.03</ShotSpread>
+            <SwayFactor>2.20</SwayFactor>
+            <Bulk>14</Bulk>
+            <WorkToMake>30000</WorkToMake>
+        </statBases>
+        <recipeMaker>
+            <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <costList>
+            <Steel>100</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+            <Chemfuel>15</Chemfuel>
+        </costList>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_60BigRubber_FR</defaultProjectile>
+                <warmupTime>1.15</warmupTime>
+                <range>75</range>
+                <soundCast>Shot_SniperRifle</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+                <recoilAmount>2.35</recoilAmount>
+            </li>
+        </verbs>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>6</power>
+                <cooldownTime>2.5</cooldownTime>
+                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawSize>1.0,1.0</DrawSize>
+                <DrawOffset>0.2,-0.1</DrawOffset>
+            </li>
+        </modExtensions>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>7</magazineSize>
+                <reloadTime>4</reloadTime>
+                <ammoSet>AmmoSet_60BigRubber</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+				<aiUseBurstMode>FALSE</aiUseBurstMode>
+				<aiAimMode>AimedShot</aiAimMode>
+			</li>
+        </comps>
+        <weaponTags Inherit="False">
+            <li>NonLethal</li>
+            <li>CE_AI_SR</li>
+            <li>SniperRifle</li>
+            <li>Bipod_AMR</li>
+        </weaponTags>
+    </ThingDef>
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>RC60HippoMidnight</defName>
+        <label>RC-60 "Hippo" (Midnight)</label>
+        <description>An extraordinary semi-automatic precision rifle, the RC60 "Hippo" Midnight variant is engineered to unleash the power of less-lethal .60 Big Rubber rounds with exceptional force. This stealthy version features a sleek black finish, optimized for low-light and covert operations. Its high magnification scope ensures pinpoint accuracy during long-range riot suppression, even in challenging visibility conditions.</description>
+        <graphicData>
+            <texPath>Guns/RC60HippoB</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1.8, 1.8)</drawSize>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <statBases>
+            <Mass>14</Mass>
+            <RangedWeapon_Cooldown>0.65</RangedWeapon_Cooldown>
+            <SightsEfficiency>3</SightsEfficiency>
+            <ShotSpread>0.03</ShotSpread>
+            <SwayFactor>2.20</SwayFactor>
+            <Bulk>14</Bulk>
+            <WorkToMake>30000</WorkToMake>
+        </statBases>
+        <recipeMaker>
+            <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <costList>
+            <Steel>100</Steel>
+            <ComponentIndustrial>5</ComponentIndustrial>
+            <Chemfuel>15</Chemfuel>
+        </costList>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_60BigRubber_FR</defaultProjectile>
+                <warmupTime>1.15</warmupTime>
+                <range>75</range>
+                <soundCast>Shot_SniperRifle</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+                <recoilAmount>2.35</recoilAmount>
+            </li>
+        </verbs>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>6</power>
+                <cooldownTime>2.5</cooldownTime>
+                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawSize>1.0,1.0</DrawSize>
+                <DrawOffset>0.2,-0.1</DrawOffset>
+            </li>
+        </modExtensions>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>7</magazineSize>
+                <reloadTime>4</reloadTime>
+                <ammoSet>AmmoSet_60BigRubber</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+				<aiUseBurstMode>FALSE</aiUseBurstMode>
+				<aiAimMode>AimedShot</aiAimMode>
+			</li>
+        </comps>
+        <weaponTags Inherit="False">
+            <li>NonLethal</li>
+            <li>CE_AI_SR</li>
+            <li>SniperRifle</li>
+            <li>Bipod_AMR</li>
+        </weaponTags>
+    </ThingDef>
+</Defs>

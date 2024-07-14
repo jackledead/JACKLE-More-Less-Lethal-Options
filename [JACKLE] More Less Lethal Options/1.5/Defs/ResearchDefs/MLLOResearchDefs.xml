@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- ================= Research ================= -->
+    <ResearchProjectDef>
+        <defName>JackleLessLethalRubberProjectilesResearch</defName>
+        <label>rubber projectiles</label>
+        <description>Enables production of riot control rubber ammunition and weapons that fire these munitions.</description>
+        <baseCost>600</baseCost>
+        <techLevel>Industrial</techLevel>
+        <prerequisites>
+            <li>BlowbackOperation</li>
+        </prerequisites>
+        <researchViewX>8.25</researchViewX>
+        <researchViewY>5.25</researchViewY>
+        <!-- TODO test research screen loading and position -->
+    </ResearchProjectDef>
+    <!-- Note: Big Rubber Research Removed -->
+</Defs>

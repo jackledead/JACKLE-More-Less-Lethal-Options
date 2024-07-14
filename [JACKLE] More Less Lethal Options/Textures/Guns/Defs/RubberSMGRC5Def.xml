@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>LessLethalRC5Flurry</defName>
+        <label>RC-5 "Flurry"</label>
+        <description>A compact submachine gun designed to fire less-lethal rubber bullets. The RC-5 "Flurry" delivers rapid, less-lethal crowd control.</description>
+        <graphicData>
+            <texPath>Guns/RC-5</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_SMG</soundInteract>
+        <statBases>
+            <WorkToMake>7000</WorkToMake>
+            <Mass>1.85</Mass>
+            <Bulk>3</Bulk>
+            <ShotSpread>0.2</ShotSpread>
+            <SightsEfficiency>1</SightsEfficiency>
+            <RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
+            <SwayFactor>1.25</SwayFactor>
+        </statBases>
+        <recipeMaker>
+            <researchPrerequisite>JackleLessLethalRubberProjectilesResearch</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>4</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <costList>
+            <Steel>30</Steel>
+            <Chemfuel>10</Chemfuel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <recoilAmount>1.40</recoilAmount>
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_11mmLessLethal_FR</defaultProjectile>
+                <burstShotCount>3</burstShotCount>
+                <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+                <warmupTime>0.45</warmupTime>
+                <range>20</range>
+                <soundCast>Shot_Autopistol</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>30</magazineSize>
+                <reloadTime>5.0</reloadTime>
+                <ammoSet>AmmoSet_11mmLessLethal</ammoSet>
+                <!-- TODO change this to hollow core once that ammo has been made -->
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>False</aiUseBurstMode>
+                <aiAimMode>Snapshot</aiAimMode>
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+            </li>
+        </comps>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>2.00</cooldownTime>
+                <chanceFactor>1.5</chanceFactor>
+                <armorPenetrationBlunt>1.7</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>grip</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>2.00</cooldownTime>
+                <armorPenetrationBlunt>1.6</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>4</power>
+                <cooldownTime>2.03</cooldownTime>
+                <armorPenetrationBlunt>1.59</armorPenetrationBlunt>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawSize>0.83,0.83</DrawSize>
+                <!-- Note: Decreased from .85 for xy -->
+                <DrawOffset>-0.2,-0.08</DrawOffset>
+                <!-- Note: changed from -.2 and -.1 to current -->
+            </li>
+        </modExtensions>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <weaponTags Inherit="False">
+            <li>NonLethal</li>
+        </weaponTags>
+    </ThingDef>
+</Defs>

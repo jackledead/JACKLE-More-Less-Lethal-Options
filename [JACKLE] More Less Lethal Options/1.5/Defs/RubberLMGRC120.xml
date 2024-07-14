@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>RC120Daeodon</defName>
+        <label>RC-120 "Daeodon"</label>
+        <description>A heavy machine gun designed to fire less-lethal .60 Big Rubber rounds. The RC-120 "Daeodon" offers impressive suppression capabilities for riot control and area denial, while minimizing fatalities. Its versatile fire modes make it adaptable to various crowd control scenarios.</description>
+        <graphicData>
+            <texPath>Guns/RC120Daeodon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1.2, 1.2)</drawSize>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <statBases>
+            <Mass>11</Mass>
+            <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
+            <SightsEfficiency>1.0</SightsEfficiency>
+            <ShotSpread>0.06</ShotSpread>
+            <SwayFactor>1.8</SwayFactor>
+            <Bulk>15.5</Bulk>
+            <WorkToMake>45000</WorkToMake>
+        </statBases>
+        <recipeMaker>
+            <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <costList>
+            <Steel>120</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+            <Chemfuel>25</Chemfuel>
+        </costList>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_60BigRubber_FR</defaultProjectile>
+                <warmupTime>1.5</warmupTime>
+                <range>55</range>
+                <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                <burstShotCount>5</burstShotCount>
+                <soundCast>50Cal_Browning</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>10</muzzleFlashScale>
+                <recoilAmount>1.55</recoilAmount>
+            </li>
+        </verbs>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2.2</cooldownTime>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>7</power>
+                <cooldownTime>2.6</cooldownTime>
+                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2.2</cooldownTime>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>50</magazineSize>
+                <reloadTime>7.5</reloadTime>
+                <ammoSet>AmmoSet_60BigRubber</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>TRUE</aiUseBurstMode>
+                <aiAimMode>AimedShot</aiAimMode>
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+                <noSingleShot>false</noSingleShot>
+                <noSnapshot>false</noSnapshot>
+            </li>
+        </comps>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawSize>1.2,1.2</DrawSize>
+                <DrawOffset>0.0,0.0</DrawOffset>
+            </li>
+        </modExtensions>
+        <weaponTags Inherit="False">
+            <li>NonLethal</li>
+            <li>CE_AI_AssaultWeapon</li>
+        </weaponTags>
+    </ThingDef>
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>RC120DaeodonMidnight</defName>
+        <label>RC-120 "Daeodon" (Midnight)</label>
+        <description>A heavy machine gun designed to fire less-lethal .60 Big Rubber rounds. The RC-120 "Daeodon" Midnight variant features a sleek black finish optimized for low-light and covert operations. The RC-120 "Daeodon" offers impressive suppression capabilities for riot control and area denial, while minimizing fatalities. Its versatile fire modes make it adaptable to various crowd control scenarios.</description>
+        <graphicData>
+            <texPath>Guns/RC120DaeodonB</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1.2, 1.2)</drawSize>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <statBases>
+            <Mass>11</Mass>
+            <RangedWeapon_Cooldown>0.56</RangedWeapon_Cooldown>
+            <SightsEfficiency>1.0</SightsEfficiency>
+            <ShotSpread>0.06</ShotSpread>
+            <SwayFactor>1.8</SwayFactor>
+            <Bulk>15.5</Bulk>
+            <WorkToMake>45000</WorkToMake>
+        </statBases>
+        <recipeMaker>
+            <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>8</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <costList>
+            <Steel>120</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+            <Chemfuel>25</Chemfuel>
+        </costList>
+        <verbs>
+            <li Class="CombatExtended.VerbPropertiesCE">
+                <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_60BigRubber_FR</defaultProjectile>
+                <warmupTime>1.5</warmupTime>
+                <range>55</range>
+                <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                <burstShotCount>5</burstShotCount>
+                <soundCast>50Cal_Browning</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>10</muzzleFlashScale>
+                <recoilAmount>1.55</recoilAmount>
+            </li>
+        </verbs>
+        <tools>
+            <li Class="CombatExtended.ToolCE">
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2.2</cooldownTime>
+                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>7</power>
+                <cooldownTime>2.6</cooldownTime>
+                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+                <label>muzzle</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2.2</cooldownTime>
+                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+            </li>
+        </tools>
+        <comps>
+            <li Class="CombatExtended.CompProperties_AmmoUser">
+                <magazineSize>50</magazineSize>
+                <reloadTime>7.5</reloadTime>
+                <ammoSet>AmmoSet_60BigRubber</ammoSet>
+            </li>
+            <li Class="CombatExtended.CompProperties_FireModes">
+                <aiUseBurstMode>TRUE</aiUseBurstMode>
+                <aiAimMode>AimedShot</aiAimMode>
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+                <noSingleShot>false</noSingleShot>
+                <noSnapshot>false</noSnapshot>
+            </li>
+        </comps>
+        <modExtensions>
+            <li Class="CombatExtended.GunDrawExtension">
+                <DrawSize>1.2,1.2</DrawSize>
+                <DrawOffset>0.0,0.0</DrawOffset>
+            </li>
+        </modExtensions>
+        <weaponTags Inherit="False">
+            <li>NonLethal</li>
+            <li>CE_AI_AssaultWeapon</li>
+        </weaponTags>
+    </ThingDef>
+</Defs>
